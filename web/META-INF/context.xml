@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/FinalProject"/>
+<Context antiJARLocking="true" path="/comic_books">
+    <Resource name="jdbc/goldenoaks" auth="Container"
+        driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql//loaclhost:8088/murach?autoReconnect=true"
+        username="root" password="MySQLCl4ss57U44"
+        maxActive="100" maxIdle="30" maxWait="10000"
+        logAbandoned="true" removeAbndoned="true"
+        removeAbandonedTimout="60" type="javax.sql.DataSource" />
+</Context>
