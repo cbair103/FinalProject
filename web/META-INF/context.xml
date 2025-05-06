@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context antiJARLocking="true" path="/comic_books">
-    <Resource name="jdbc/goldenoaks" auth="Container"
+    <Resource name="jdbc/murach" auth="Container"
         driverClassName="com.mysql.jdbc.Driver"
         url="jdbc:mysql//loaclhost:8088/murach?autoReconnect=true"
         username="root" password="MySQLCl4ss57U44"
