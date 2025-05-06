@@ -2,30 +2,30 @@
 <section>
     <h1>Checkout a book</h1>
     <form action="murach" method="post">
-        <input type="hidden" name="action" value="doCheckout"/>
+        <input type="hidden" name="action" value="doRegisterComic"/>
         <label>Title:</label>
         <input type="text" name="title"
-               value="${checkout.title}" required/><br>
+               value="${comicBooks.Title}" required/><br>
         <label>Publisher</label>
         <input type="text" name="publisher"
-               value="${checkout.publisher}" required/><br>
+               value="${comicBooks.Publisher}" required/><br>
         <label>Author:</label>
         <input type="text" name="author"
-               value="${checkout.author}" required/><br>
+               value="${comicBooks.Author}" required/><br>
         <label>Illustrator:</label>
         <input type="text" name="illustrator" 
-               value="${checkout.illustrator}" required/><br>
+               value="${comicBooks.Illustrator}" required/><br>
         <label>Issue #</label>
         <input type="number" name="issue" 
-               value="${checkout.issue}" required/><br>
+               value="${comicBooks.Issue}" required/><br>
         <label>Location</label>
         <input type="text" name="location" 
-               value="${checkout.location}" required/><br>
+               value="${comicBooks.Location}" required/><br>
         <label>Price</label>
         <input type="number" name="price" 
-               value="${checkout.price}" required/><br>
+               value="${comicBooks.Price}" required/><br>
         <label>&nbsp;</label>
-        <input type="submit" value="Checkout"/><br>
+        <input type="submit" value="Register"/><br>
     </form>
 </section>
 </body>

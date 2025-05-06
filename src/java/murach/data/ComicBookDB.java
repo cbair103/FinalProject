@@ -67,25 +67,5 @@ public class ComicBookDB {
             pool.freeConnection(connection);
         }
         return comicBooks;
-    }
-    
-    public static int checkinBook(long checkoutNumber){
-        ConnectionPool pool = ConnectionPool.getInstance();
-        Connection connection = pool.getConnection();
-        PreparedStatement ps = null;
-        String query  = "DELETE FROM Checkout WHERE CheckoutNumer = ?";
-        try{
-            ps = connection.prepareStatement(query);
-            ps.setLong(1, checkoutNumber);
-                return ps.executeUpdate();
-        }catch(SQLException e) {
-            System.out.println(e);
-            return 0;
-        }finally {
-            DBUtil.closePreparedStatement(ps);
-            pool.freeConnection(connection);
-        }
-    }
-    
-    
+    } 
 }
