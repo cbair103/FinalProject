@@ -16,13 +16,13 @@
         <input type="text" name="illustrator" 
                value="${checkout.illustrator}" required/><br>
         <label>Issue #</label>
-        <input type="text" name="issue" 
+        <input type="number" name="issue" 
                value="${checkout.issue}" required/><br>
         <label>Location</label>
         <input type="text" name="location" 
                value="${checkout.location}" required/><br>
         <label>Price</label>
-        <input type="text" name="price" 
+        <input type="number" name="price" 
                value="${checkout.price}" required/><br>
         <label>&nbsp;</label>
         <input type="submit" value="Checkout"/><br>
