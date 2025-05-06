@@ -1,7 +1,7 @@
 package murach.controllers;
 
 import murach.business.ComicBooks;
-import murach.data.CheckoutDb;
+import murach.data.ComicBookDB;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -18,8 +18,8 @@ public class ComicController extends HttpServlet {
         String action = request.getParameter("action");
         String url = "";
         switch (action) {
-            case "checkout":
-                url = "/checkout.jsp";
+            case "register":
+                url = "/form.jsp";
                 break;
             case "manage":
                 url = manage(request, response);
@@ -37,8 +37,8 @@ public class ComicController extends HttpServlet {
         String action = request.getParameter("action");
         String url = "";
         switch (action) {
-            case "doCheckout":
-                url = doCheckout(request, response);
+            case "doRegisterComic":
+                url = doRegisterComic(request, response);
                 break;
         }
 
@@ -48,23 +48,26 @@ public class ComicController extends HttpServlet {
 
     private String manage(HttpServletRequest request,
             HttpServletResponse response) {
-        List checkedOutList = ComicBookDb.selectCheckedOutBooks();
-        request.setAttribute("checkedOutList", checkedOutList);
-        return "/checkedOutList.jsp";
+        List comicBook = ComicBookDB.selectComicBooks();
+        request.setAttribute("comicBook", comicBook);
+        return "/table.jsp";
     }
 
-    private String doCheckout(HttpServletRequest request,
+    private String doRegisterComic(HttpServletRequest request,
             HttpServletResponse response) {
         ComicBooks comicBooks = new ComicBooks();
-        checkout.setFirstName(request.getParameter("firstName"));
-        checkout.setLastName(request.getParameter("lastName"));
-        checkout.setEmailAddress(request.getParameter("emailAddress"));
-        checkout.setBookTitle(request.getParameter("bookTitle"));
+        comicBooks.setTitle(request.getParameter("Title"));
+        comicBooks.setPublisher(request.getParameter("Publisher"));
+        comicBooks.setAuthor(request.getParameter("Author"));
+        comicBooks.setIllustrator(request.getParameter("Illustrator"));
+        comicBooks.setIssue(request.getParameter("Issue"));
+        comicBooks.setLocation(request.getParameter("Location"));
+        comicBooks.setPrice(request.getParameter("Price"));
 
-        CheckoutDb.checkoutBook(checkout);
-        request.setAttribute("checkout", checkout);
+        ComicBookDB.registerComic(comicBooks);
+        request.setAttribute("comicBooks", comicBooks);
 
-        return "/thankyou.jsp";
+        return "/table.jsp";
     }
 
 

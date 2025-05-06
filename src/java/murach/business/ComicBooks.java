@@ -10,18 +10,18 @@ public class ComicBooks implements Serializable {
     private String publisher;
     private String author;
     private String illustrator;
-    private Integer issue;
+    private String issue;
     private String location;
-    private Integer price;
+    private String price;
    
     public ComicBooks() {
         title = "";
         publisher = "";
         author = "";
         illustrator = "";
-        issue = 0;
+        issue = "";
         location = "";
-        price = 0;
+        price = "";
     }
 
     public String getTitle() {
@@ -56,11 +56,11 @@ public class ComicBooks implements Serializable {
         this.illustrator = illustrator;
     }
     
-    public Integer getIssue(){
+    public String getIssue(){
         return issue;
     }
     
-    public void setIssue(Integer issue){
+    public void setIssue(String issue){
         this.issue = issue;
     }
     
@@ -72,11 +72,11 @@ public class ComicBooks implements Serializable {
         this.location = location;
     }
     
-    public Integer getPrice(){
+    public String getPrice(){
         return price;
     }
     
-    public void setPrice(Integer price){
+    public void setPrice(String price){
         this.price = price;
     }
     

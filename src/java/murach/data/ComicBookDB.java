@@ -23,9 +23,9 @@ public class ComicBookDB {
             ps.setString(2, comicBooks.getPublisher());
             ps.setString(3, comicBooks.getAuthor());
             ps.setString(4, comicBooks.getIllustrator());
-            ps.setInt(5, comicBooks.getIssue());
+            ps.setString(5, comicBooks.getIssue());
             ps.setString(6, comicBooks.getLocation());
-            ps.setInt(7, comicBooks.getPrice());
+            ps.setString(7, comicBooks.getPrice());
             return ps.executeUpdate();
         }catch (SQLException e){
             System.out.println(e);
@@ -53,9 +53,9 @@ public class ComicBookDB {
                 comicBook.setPublisher(rs.getString("Publisher"));
                 comicBook.setAuthor(rs.getString("Author"));
                 comicBook.setIllustrator(rs.getString("Illustrator"));
-                comicBook.setIssue(rs.getInt("Issue"));
+                comicBook.setIssue(rs.getString("Issue"));
                 comicBook.setLocation(rs.getString("Location"));
-                comicBook.setPrice(rs.getInt("Price"));
+                comicBook.setPrice(rs.getString("Price"));
                 comicBooks.add(comicBook);
             }
         }catch (SQLException e){
