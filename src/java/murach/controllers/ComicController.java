@@ -35,7 +35,7 @@ public class ComicController extends HttpServlet {
             HttpServletResponse response)
             throws ServletException, IOException {
         String action = request.getParameter("action");
-        String url = "";
+        String url = "/index.jsp";
         switch (action) {
             case "doRegisterComic":
                 url = doRegisterComic(request, response);

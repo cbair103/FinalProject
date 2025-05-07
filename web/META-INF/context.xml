@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context antiJARLocking="true" path="/comic_books">
-    <Resource name="jdbc/murach" auth="Container"
+    <Resource name="jdbc/comic_books" auth="Container"
         driverClassName="com.mysql.jdbc.Driver"
-        url="jdbc:mysql//loaclhost:8088/murach?autoReconnect=true"
+        url="jdbc:mysql//localhost:8088/comic_books"
         username="root" password="MySQLCl4ss57U44"
         maxActive="100" maxIdle="30" maxWait="10000"
-        logAbandoned="true" removeAbndoned="true"
+        logAbandoned="true" removeAbandoned="true"
         removeAbandonedTimout="60" type="javax.sql.DataSource" />
 </Context>
