@@ -1,13 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="header.jsp" %>
 <section>
-     private String title;
-    private String publisher;
-    private String author;
-    private String illustrator;
-    private String issue;
-    private String location;
-    private String price;
     
     <h1>Current List of Interested Comic Books</h1>
     <table>
@@ -20,15 +13,15 @@
             <th>Location</th>
             <th>Price</th>
         </tr>
-        <c:forEach var="comicBooks" items="${table}">
+        <c:forEach var="comicBook" items="${table}">
             <tr>
-                <td>${comicBooks.Title}</td>
-                <td>${comicBooks.Publisher}</td>
-                <td>${comicBooks.Author}</td>
-                <td>${comicBooks.Illustrator}</td>
-                <td>${comicBooks.Issue}</td>
-                <td>${comicBooks.Location}</td>
-                <td>${comicBooks.Price}</td>
+                <td>${comicBook.Title}</td>
+                <td>${comicBook.Publisher}</td>
+                <td>${comicBook.Author}</td>
+                <td>${comicBook.Illustrator}</td>
+                <td>${comicBook.Issue}</td>
+                <td>${comicBook.Location}</td>
+                <td>${comicBook.Price}</td>
             </tr>
         </c:forEach>
     </table>
