@@ -3,6 +3,7 @@
 <section>
     
     <h1>Current List of Interested Comic Books</h1>
+    
     <table>
         <tr>
             <th>Title</th>
