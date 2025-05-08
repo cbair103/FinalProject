@@ -30,6 +30,6 @@ INSERT INTO comicBooks (Title, Publisher, Author, Illustrator, Issue, Location, 
 INSERT INTO comicBooks (Title, Publisher, Author, Illustrator, Issue, Location, Price)
 	VALUES("Adventures of Superman", "DC Comics", "Marv Wolfman", "Jerry Ordway", "432", "The Comic Center of Pasadena", "5.99");
 
-INSERT INTO comicBooks (Title, Publisher, Author, Illustrator, Issue, Location, Price)
+INSERT INTO comicBooks (Title, Publisher, Author, Illustrator, Issue, Location, Price)comicbooks
 	VALUES("Invincible Ironman", "Marvel Comics", "Matt Fraction", "Jamie Mckelvie", "32", "The Android's Dungeon & Baseball Card Shop", "4.99");
     
